@@ -196,7 +196,13 @@ export default {
       this.formIsValidPassword();
       this.formIsValidPasswordCheck();
 
-      if (this.formIsValidEmail() && this.formIsValidName()) {
+      if (
+        this.formIsValidEmail() &&
+        this.formIsValidName() &&
+        this.formIsValidSelect() &&
+        this.formIsValidPassword() &&
+        this.formIsValidPasswordCheck()
+      ) {
         let objDateSet = {
           public: this.isFlagSwitch,
           username: this.name,
